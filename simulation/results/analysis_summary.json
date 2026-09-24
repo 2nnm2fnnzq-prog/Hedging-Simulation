@@ -1,0 +1,18 @@
+{
+  "cells": 324,
+  "comparisons": 648,
+  "sign_counts": {
+    "negative": {
+      "Adjusted_minus_Heston": 324,
+      "Heston_minus_BS": 0
+    },
+    "positive": {
+      "Adjusted_minus_Heston": 0,
+      "Heston_minus_BS": 324
+    }
+  },
+  "excluded_paths": 0,
+  "max_top1pct_loss_share": 0.2186147381908297,
+  "median_top1pct_loss_share": 0.08190419843657021,
+  "max_absolute_refinement_shift": 0.0123478323375119
+}

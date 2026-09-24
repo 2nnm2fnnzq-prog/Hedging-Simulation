@@ -1,0 +1,18 @@
+{
+  "scheme": "full-truncation latent variance Euler; log-stock Euler",
+  "rng": "NumPy default_rng / PCG64",
+  "seed": 20260925,
+  "n_paths": 4096,
+  "days": 252,
+  "trading_days": 252,
+  "substeps_per_day": 8,
+  "coupling_substeps_per_day": 8,
+  "integration_dt_years": 0.000496031746031746,
+  "latent_negative_step_count": 561,
+  "latent_negative_step_fraction": 6.793794177827381e-05,
+  "paths_with_latent_negative_state": 286,
+  "daily_zero_variance_count_excluding_initial": 64,
+  "minimum_latent_variance": -0.0004430028782277882,
+  "invalid_path_count": 0,
+  "excluded_path_count": 0
+}

@@ -1,0 +1,12 @@
+{
+  "heston_points": 34836486,
+  "quadrature_disagreements": 658128,
+  "roundoff_price_bound_adjustments": 260727,
+  "iv_points": 3870720,
+  "iv_zero_time_value_limits": 64174,
+  "quadrature_refinement_points": 658128,
+  "quadrature_refinement_acceptances": 435629,
+  "quantlib_fallback_points": 222499,
+  "quantlib_zero_variance_regularizations": 142,
+  "quantlib_integrator_recoveries": 4617
+}
