@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "seed": 24791,
+  "state_draws": 128,
+  "expiries": [
+    0.003968253968253968,
+    0.02,
+    0.1,
+    0.5,
+    1.0
+  ],
+  "price_comparisons": 640,
+  "state_distribution": {
+    "spot": "log-uniform on [25,300]",
+    "variance": "log-uniform on [1e-6,0.6]"
+  },
+  "parameters": {
+    "kappa": 2.75,
+    "theta": 0.0834,
+    "xi": 0.55,
+    "rho": -0.569
+  },
+  "strike": 100.0,
+  "rate": 0.04,
+  "all_outputs_finite": true,
+  "maximum_absolute_price_error": 4.3672552920177276e-09,
+  "price_tolerance": 3e-07,
+  "maximum_error_by_expiry": {
+    "0.003968253968253968": 2.3590018827235326e-11,
+    "0.02": 4.5238853630405907e-11,
+    "0.1": 4.3672552920177276e-09,
+    "0.5": 1.4132872649952333e-10,
+    "1.0": 5.755396159656812e-13
+  },
+  "diagnostics": {
+    "heston_points": 640,
+    "quadrature_disagreements": 263,
+    "quadrature_refinement_points": 263,
+    "quadrature_refinement_acceptances": 49,
+    "quantlib_fallback_points": 214,
+    "roundoff_price_bound_adjustments": 127
+  },
+  "seconds": 2.411275165999541,
+  "notes": [
+    "Additional numerical state coverage; no new hedging outcomes or research scenarios.",
+    "Prices compared with independent QuantLib adaptive integration.",
+    "Delta and variance-derivative finiteness are checked here; their accuracy is assessed separately by validate_pricing.py.",
+    "Production adaptive fallbacks and roundoff adjustments remain enabled and counted; no states excluded."
+  ]
+}
