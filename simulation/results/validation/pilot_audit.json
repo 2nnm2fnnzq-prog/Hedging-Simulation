@@ -1,0 +1,629 @@
+{
+  "audit_utc": "2026-09-24T01:05:40.415259+00:00",
+  "status": "PASS",
+  "scope": "Independent arithmetic reconciliation from saved artifacts; no option pricer or hedge engine called; no main outcomes rerun. CSV float rounding permitted at absolute tolerance 1e-10.",
+  "pilot_paths": 128,
+  "ledger_rows_reconciled": 192,
+  "summary_rows_verified": 18,
+  "paired_contrast_rows_verified": 12,
+  "check_count": 67,
+  "largest_audit_residual": 1.1368683772161603e-13,
+  "ledger_audits": [
+    {
+      "strategy": "BS",
+      "rows_reconciled": 64,
+      "terminal_error": 1.0762893765386963,
+      "nominal_fees": 0.2577682109777947,
+      "opening_fee": 0.0523092016644227,
+      "closing_fee": 0.11501552956433
+    },
+    {
+      "strategy": "Heston",
+      "rows_reconciled": 64,
+      "terminal_error": 1.5961333780771696,
+      "nominal_fees": 0.25319157179576385,
+      "opening_fee": 0.0573865852654722,
+      "closing_fee": 0.1150155295653989
+    },
+    {
+      "strategy": "Adjusted",
+      "rows_reconciled": 64,
+      "terminal_error": 0.6090680035282787,
+      "nominal_fees": 0.26009407146472524,
+      "opening_fee": 0.0479826642108634,
+      "closing_fee": 0.1150155295653483
+    }
+  ],
+  "pricing_refinement_comparison": {
+    "same_protocol_hash": true,
+    "changed_recorded_source_hashes": [
+      "pricing.py",
+      "run_study.py"
+    ],
+    "market_paths_identical": true,
+    "max_abs_reference_price_change": 1.809972260957693e-08,
+    "max_abs_iv_change": 0.383876853334719,
+    "max_abs_bs_target_change": 2.4118946395645935e-08,
+    "max_abs_terminal_error_change": 1.2536452231870499e-07,
+    "max_abs_nominal_fee_change": 2.282113181761858e-08,
+    "max_abs_mse_change": 2.4563040490477306e-09,
+    "mse_changes": [
+      {
+        "strategy": "BS",
+        "fee_bps": 0,
+        "rebalance_days": 1,
+        "mse_before": 0.9704113747545712,
+        "mse_final": 0.9704113749761611,
+        "mse_change": 2.215899685964473e-10
+      },
+      {
+        "strategy": "Heston",
+        "fee_bps": 0,
+        "rebalance_days": 1,
+        "mse_before": 1.364036228303664,
+        "mse_final": 1.36403622584736,
+        "mse_change": -2.4563040490477306e-09
+      },
+      {
+        "strategy": "Adjusted",
+        "fee_bps": 0,
+        "rebalance_days": 1,
+        "mse_before": 0.8351377876384785,
+        "mse_final": 0.8351377867253177,
+        "mse_change": -9.13160769222543e-10
+      },
+      {
+        "strategy": "BS",
+        "fee_bps": 0,
+        "rebalance_days": 5,
+        "mse_before": 1.6603394365886022,
+        "mse_final": 1.6603394366888344,
+        "mse_change": 1.0023226693078868e-10
+      },
+      {
+        "strategy": "Heston",
+        "fee_bps": 0,
+        "rebalance_days": 5,
+        "mse_before": 2.168937121062606,
+        "mse_final": 2.168937121341424,
+        "mse_change": 2.7881830177989286e-10
+      },
+      {
+        "strategy": "Adjusted",
+        "fee_bps": 0,
+        "rebalance_days": 5,
+        "mse_before": 1.4390119372980117,
+        "mse_final": 1.4390119372949026,
+        "mse_change": -3.1090685581602884e-12
+      },
+      {
+        "strategy": "BS",
+        "fee_bps": 5,
+        "rebalance_days": 1,
+        "mse_before": 0.8902580582799186,
+        "mse_final": 0.8902580585054716,
+        "mse_change": 2.2555302070514927e-10
+      },
+      {
+        "strategy": "Heston",
+        "fee_bps": 5,
+        "rebalance_days": 1,
+        "mse_before": 1.2414399874782087,
+        "mse_final": 1.241439985042483,
+        "mse_change": -2.4357256211970935e-09
+      },
+      {
+        "strategy": "Adjusted",
+        "fee_bps": 5,
+        "rebalance_days": 1,
+        "mse_before": 0.8021974967433204,
+        "mse_final": 0.8021974960042089,
+        "mse_change": -7.39111549741267e-10
+      },
+      {
+        "strategy": "BS",
+        "fee_bps": 5,
+        "rebalance_days": 5,
+        "mse_before": 1.569516079183519,
+        "mse_final": 1.5695160792545384,
+        "mse_change": 7.101941257303679e-11
+      },
+      {
+        "strategy": "Heston",
+        "fee_bps": 5,
+        "rebalance_days": 5,
+        "mse_before": 2.0424679039699285,
+        "mse_final": 2.042467904187925,
+        "mse_change": 2.1799628768803814e-10
+      },
+      {
+        "strategy": "Adjusted",
+        "fee_bps": 5,
+        "rebalance_days": 5,
+        "mse_before": 1.3837532971728923,
+        "mse_final": 1.3837532971865156,
+        "mse_change": 1.3623324690570371e-11
+      },
+      {
+        "strategy": "BS",
+        "fee_bps": 10,
+        "rebalance_days": 1,
+        "mse_before": 0.8797837863955351,
+        "mse_final": 0.8797837866514487,
+        "mse_change": 2.5591362362575865e-10
+      },
+      {
+        "strategy": "Heston",
+        "fee_bps": 10,
+        "rebalance_days": 1,
+        "mse_before": 1.1899358348325328,
+        "mse_final": 1.1899358324733584,
+        "mse_change": -2.3591744113815594e-09
+      },
+      {
+        "strategy": "Adjusted",
+        "fee_bps": 10,
+        "rebalance_days": 1,
+        "mse_before": 0.8388295356257669,
+        "mse_final": 0.8388295350989662,
+        "mse_change": -5.268007141623343e-10
+      },
+      {
+        "strategy": "BS",
+        "fee_bps": 10,
+        "rebalance_days": 5,
+        "mse_before": 1.506684657079171,
+        "mse_final": 1.5066846571212076,
+        "mse_change": 4.203659642598723e-11
+      },
+      {
+        "strategy": "Heston",
+        "fee_bps": 10,
+        "rebalance_days": 5,
+        "mse_before": 1.9449013519864944,
+        "mse_final": 1.9449013521452805,
+        "mse_change": 1.5878609538333421e-10
+      },
+      {
+        "strategy": "Adjusted",
+        "fee_bps": 10,
+        "rebalance_days": 5,
+        "mse_before": 1.3559801244105258,
+        "mse_final": 1.355980124440936,
+        "mse_change": 3.041011886750766e-11
+      }
+    ],
+    "maximum_iv_change_case": {
+      "path_index": 77,
+      "day": 62,
+      "spot": 119.19489460766663,
+      "variance": 0.027924872376882372,
+      "time_to_maturity": 0.003968253968253968,
+      "lower_price_bound": 18.205909169227823,
+      "old_price": 18.205909169227837,
+      "final_price": 18.20590916922916,
+      "old_time_value": 1.4210854715202004e-14,
+      "final_time_value": 1.3358203432289883e-12,
+      "old_iv": 0.0,
+      "final_iv": 0.383876853334719,
+      "old_bs_target": 1.0,
+      "final_bs_target": 0.9999999999967057
+    },
+    "iv_interpretation": "The largest raw IV change occurs where the option time value is approximately 1e-12 and IV inversion is ill-conditioned. The price crosses the documented zero-time-value threshold; its BS delta changes by only approximately 3.3e-12. Raw IV differences at this boundary should not be interpreted as substantive volatility evidence."
+  },
+  "parallel_aggregation_review": {
+    "status": "PASS",
+    "findings": [
+      "Each worker reads the same saved market path file; no worker draws separate market paths.",
+      "Each contract has a unique output directory, with separate QuantLib process state.",
+      "Worker diagnostics reset before every contract; parent sums each returned counter once.",
+      "Only the parent writes combined CSV checkpoints; pool.map preserves the defined contract order.",
+      "No completion marker is written if a worker raises an exception."
+    ],
+    "limitation": "Read-only source review; no serial-versus-parallel full experiment repeated."
+  },
+  "checks": [
+    {
+      "name": "BS: ledger dates",
+      "passed": true,
+      "max_absolute_residual": 0.0,
+      "tolerance": 0
+    },
+    {
+      "name": "BS: saved market prices",
+      "passed": true,
+      "max_absolute_residual": 1.4210854715202004e-14,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "BS: pre-expiry targets",
+      "passed": true,
+      "max_absolute_residual": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "BS: every cash_before row",
+      "passed": true,
+      "max_absolute_residual": 7.105427357601002e-14,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "BS: every interest row",
+      "passed": true,
+      "max_absolute_residual": 9.974659986866641e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "BS: every trade row",
+      "passed": true,
+      "max_absolute_residual": 2.8687989483966447e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "BS: every fees row",
+      "passed": true,
+      "max_absolute_residual": 1.0278236595162582e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "BS: every cumulative_fees row",
+      "passed": true,
+      "max_absolute_residual": 1.6653345369377348e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "BS: every holdings row",
+      "passed": true,
+      "max_absolute_residual": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "BS: every cash_after row",
+      "passed": true,
+      "max_absolute_residual": 7.105427357601002e-14,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "BS: every portfolio row",
+      "passed": true,
+      "max_absolute_residual": 5.684341886080802e-14,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "BS: terminal payoff",
+      "passed": true,
+      "max_absolute_residual": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "BS: terminal ledger error",
+      "passed": true,
+      "max_absolute_residual": 2.220446049250313e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "BS: pathwise stored error",
+      "passed": true,
+      "max_absolute_residual": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "BS: pathwise stored fees",
+      "passed": true,
+      "max_absolute_residual": 1.1102230246251565e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "BS: common initial cash",
+      "passed": true,
+      "max_absolute_residual": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "BS: opening wealth loses only opening fee",
+      "passed": true,
+      "max_absolute_residual": 3.552713678800501e-15,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "Heston: ledger dates",
+      "passed": true,
+      "max_absolute_residual": 0.0,
+      "tolerance": 0
+    },
+    {
+      "name": "Heston: saved market prices",
+      "passed": true,
+      "max_absolute_residual": 1.4210854715202004e-14,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "Heston: pre-expiry targets",
+      "passed": true,
+      "max_absolute_residual": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "Heston: every cash_before row",
+      "passed": true,
+      "max_absolute_residual": 1.1368683772161603e-13,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "Heston: every interest row",
+      "passed": true,
+      "max_absolute_residual": 1.1449174941446927e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "Heston: every trade row",
+      "passed": true,
+      "max_absolute_residual": 2.2898349882893854e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "Heston: every fees row",
+      "passed": true,
+      "max_absolute_residual": 1.0169816377914032e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "Heston: every cumulative_fees row",
+      "passed": true,
+      "max_absolute_residual": 1.3877787807814457e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "Heston: every holdings row",
+      "passed": true,
+      "max_absolute_residual": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "Heston: every cash_after row",
+      "passed": true,
+      "max_absolute_residual": 1.1368683772161603e-13,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "Heston: every portfolio row",
+      "passed": true,
+      "max_absolute_residual": 1.0125233984581428e-13,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "Heston: terminal payoff",
+      "passed": true,
+      "max_absolute_residual": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "Heston: terminal ledger error",
+      "passed": true,
+      "max_absolute_residual": 9.947598300641403e-14,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "Heston: pathwise stored error",
+      "passed": true,
+      "max_absolute_residual": 9.947598300641403e-14,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "Heston: pathwise stored fees",
+      "passed": true,
+      "max_absolute_residual": 5.551115123125783e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "Heston: common initial cash",
+      "passed": true,
+      "max_absolute_residual": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "Heston: opening wealth loses only opening fee",
+      "passed": true,
+      "max_absolute_residual": 4.440892098500626e-15,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "Adjusted: ledger dates",
+      "passed": true,
+      "max_absolute_residual": 0.0,
+      "tolerance": 0
+    },
+    {
+      "name": "Adjusted: saved market prices",
+      "passed": true,
+      "max_absolute_residual": 1.4210854715202004e-14,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "Adjusted: pre-expiry targets",
+      "passed": true,
+      "max_absolute_residual": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "Adjusted: every cash_before row",
+      "passed": true,
+      "max_absolute_residual": 7.105427357601002e-14,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "Adjusted: every interest row",
+      "passed": true,
+      "max_absolute_residual": 9.71445146547012e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "Adjusted: every trade row",
+      "passed": true,
+      "max_absolute_residual": 2.570643350963131e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "Adjusted: every fees row",
+      "passed": true,
+      "max_absolute_residual": 1.0928757898653885e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "Adjusted: every cumulative_fees row",
+      "passed": true,
+      "max_absolute_residual": 1.3877787807814457e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "Adjusted: every holdings row",
+      "passed": true,
+      "max_absolute_residual": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "Adjusted: every cash_after row",
+      "passed": true,
+      "max_absolute_residual": 7.105427357601002e-14,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "Adjusted: every portfolio row",
+      "passed": true,
+      "max_absolute_residual": 5.684341886080802e-14,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "Adjusted: terminal payoff",
+      "passed": true,
+      "max_absolute_residual": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "Adjusted: terminal ledger error",
+      "passed": true,
+      "max_absolute_residual": 4.263256414560601e-14,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "Adjusted: pathwise stored error",
+      "passed": true,
+      "max_absolute_residual": 4.263256414560601e-14,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "Adjusted: pathwise stored fees",
+      "passed": true,
+      "max_absolute_residual": 5.551115123125783e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "Adjusted: common initial cash",
+      "passed": true,
+      "max_absolute_residual": 0.0,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "Adjusted: opening wealth loses only opening fee",
+      "passed": true,
+      "max_absolute_residual": 1.7763568394002505e-15,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "all 18 summaries: mse",
+      "passed": true,
+      "max_absolute_residual": 2.220446049250313e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "all 18 summaries: mean_error",
+      "passed": true,
+      "max_absolute_residual": 9.020562075079397e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "all 18 summaries: error_variance",
+      "passed": true,
+      "max_absolute_residual": 2.220446049250313e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "all 18 summaries: mean_fees",
+      "passed": true,
+      "max_absolute_residual": 8.326672684688674e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "all 18 summaries: loss_decomposition",
+      "passed": true,
+      "max_absolute_residual": 6.106226635438361e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "all 18 summaries: top1pct_loss_share",
+      "passed": true,
+      "max_absolute_residual": 8.326672684688674e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "all 18 summaries: max_abs_error",
+      "passed": true,
+      "max_absolute_residual": 4.440892098500626e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "all 12 paired contrasts: difference",
+      "passed": true,
+      "max_absolute_residual": 5.551115123125783e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "all 12 paired contrasts: se",
+      "passed": true,
+      "max_absolute_residual": 8.326672684688674e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "all 12 paired contrasts: ci95_low",
+      "passed": true,
+      "max_absolute_residual": 1.1102230246251565e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "all 12 paired contrasts: ci95_high",
+      "passed": true,
+      "max_absolute_residual": 5.551115123125783e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "all 12 paired contrasts: sim95_low",
+      "passed": true,
+      "max_absolute_residual": 2.220446049250313e-16,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "all 12 paired contrasts: sim95_high",
+      "passed": true,
+      "max_absolute_residual": 9.8879238130678e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "all 12 paired contrasts: first_half_difference",
+      "passed": true,
+      "max_absolute_residual": 5.551115123125783e-17,
+      "tolerance": 1e-10
+    },
+    {
+      "name": "refinement comparison preserves stock paths exactly",
+      "passed": true,
+      "max_absolute_residual": 0.0,
+      "tolerance": 0
+    },
+    {
+      "name": "refinement comparison preserves variance paths exactly",
+      "passed": true,
+      "max_absolute_residual": 0.0,
+      "tolerance": 0
+    }
+  ]
+}

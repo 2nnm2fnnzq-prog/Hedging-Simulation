@@ -1,0 +1,66 @@
+{
+  "passed": true,
+  "grid_cases": 900,
+  "scenarios": 9,
+  "checks": {
+    "price_error": {
+      "maximum": 1.8406254298497515e-09,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    "delta_error": {
+      "maximum": 3.761637479282598e-08,
+      "tolerance": 1e-05,
+      "passed": true
+    },
+    "variance_derivative_error": {
+      "maximum": 0.00011786314765060979,
+      "tolerance": 0.002,
+      "passed": true
+    },
+    "quadrature_price_difference": {
+      "maximum": 1.8406254298497515e-09,
+      "tolerance": 3e-07,
+      "passed": true
+    },
+    "quadrature_delta_difference": {
+      "maximum": 3.7615971115734226e-08,
+      "tolerance": 1e-05,
+      "passed": true
+    },
+    "quadrature_variance_difference": {
+      "maximum": 3.53194873170537e-06,
+      "tolerance": 0.002,
+      "passed": true
+    },
+    "bs_iv_round_trip": {
+      "maximum": 7.771561172376096e-16,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    "constant_variance_limit": {
+      "maximum": 8.219297242817447e-09,
+      "tolerance": 1e-05,
+      "passed": true
+    }
+  },
+  "diagnostics": {
+    "heston_points": 1803,
+    "quadrature_disagreements": 548,
+    "quadrature_refinement_points": 288,
+    "quadrature_refinement_acceptances": 44,
+    "quantlib_fallback_points": 504,
+    "quantlib_zero_variance_regularizations": 180,
+    "roundoff_price_bound_adjustments": 187,
+    "iv_points": 5,
+    "iv_zero_time_value_limits": 0
+  },
+  "seconds": 5.579152124992106,
+  "notes": [
+    "Prices independently checked with QuantLib adaptive integration.",
+    "Greeks checked against Richardson differences using distinct bumps; variance derivative is not volatility vega.",
+    "Quadrature comparison uses checked 144-node and checked 180-node engines, each with its counted adaptive fallback.",
+    "Variance zero in QuantLib is regularized to 1e-12; production Fourier formula allows exactly zero.",
+    "The variance-Greek tolerance of 0.002 maps to at most about 1.5e-5 shares under the tested spot/parameter grid."
+  ]
+}

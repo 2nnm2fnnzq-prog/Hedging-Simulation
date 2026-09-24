@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "run": "main",
+      "status": "PASS",
+      "cells": 324,
+      "strategy_rows": 972,
+      "contrasts": 648
+    },
+    {
+      "run": "convergence_8",
+      "status": "PASS",
+      "cells": 324,
+      "strategy_rows": 972,
+      "contrasts": 648
+    },
+    {
+      "run": "convergence_16",
+      "status": "PASS",
+      "cells": 324,
+      "strategy_rows": 972,
+      "contrasts": 648
+    }
+  ],
+  "max_summary_mse_residual": 1.7763568394002505e-15,
+  "max_summary_contrast_residual": 4.440892098500626e-16,
+  "common_benchmark_outcomes_bitwise_identical": true,
+  "excluded_paths": 0,
+  "protocol_sha256": "0ec8d194476ee9e2e0017abed8ba630d12816447cc695e52d802388589ded65c",
+  "notes": "Recomputed summaries and paired SEs from all persisted outcomes; core hashes and completed-run markers agree."
+}

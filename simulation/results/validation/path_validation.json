@@ -1,0 +1,187 @@
+{
+  "path_count": 16384,
+  "days": 252,
+  "seed": 18092026,
+  "market_parameters": {
+    "mu": 0.1,
+    "kappa": 4.75,
+    "theta": 0.0483,
+    "xi": 0.55,
+    "rho": -0.569
+  },
+  "checks": {
+    "constant_variance_coupling": true,
+    "exact_seed_reproducibility": true,
+    "stock_endpoint_error_decreases_toward_finest_grid": true,
+    "variance_endpoint_error_decreases_toward_finest_grid": true,
+    "finest_grid_stock_first_moment_within_four_mc_standard_errors": true,
+    "finest_grid_variance_first_moment_within_four_mc_standard_errors": true,
+    "finest_grid_variance_second_raw_moment_within_four_mc_standard_errors": true,
+    "no_invalid_or_excluded_paths": true
+  },
+  "grids": {
+    "2": {
+      "diagnostics": {
+        "scheme": "full-truncation latent variance Euler; log-stock Euler",
+        "rng": "NumPy default_rng / PCG64",
+        "seed": 18092026,
+        "n_paths": 16384,
+        "days": 252,
+        "trading_days": 252,
+        "substeps_per_day": 2,
+        "coupling_substeps_per_day": 8,
+        "integration_dt_years": 0.001984126984126984,
+        "latent_negative_step_count": 4278,
+        "latent_negative_step_fraction": 0.0005180722191220238,
+        "paths_with_latent_negative_state": 2208,
+        "daily_zero_variance_count_excluding_initial": 2147,
+        "minimum_latent_variance": -0.0021703062587827247,
+        "invalid_path_count": 0,
+        "excluded_path_count": 0
+      },
+      "stock_first_moment": {
+        "estimate": 110.73175851158572,
+        "continuous_model_value": 110.51709180756477,
+        "monte_carlo_se": 0.18404467306284725,
+        "standardized_difference": 1.1663836852678287,
+        "within_four_mc_standard_errors": true
+      },
+      "variance_first_moment": {
+        "estimate": 0.04816165776432446,
+        "continuous_model_value": 0.0483,
+        "monte_carlo_se": 0.00030476035085858297,
+        "standardized_difference": -0.4539377753234565,
+        "within_four_mc_standard_errors": true
+      },
+      "variance_second_raw_moment": {
+        "estimate": 0.003841179829662496,
+        "continuous_model_value": 0.0038707485640659444,
+        "monte_carlo_se": 5.3749263196258946e-05,
+        "standardized_difference": -0.5501235299818299,
+        "within_four_mc_standard_errors": true
+      }
+    },
+    "4": {
+      "diagnostics": {
+        "scheme": "full-truncation latent variance Euler; log-stock Euler",
+        "rng": "NumPy default_rng / PCG64",
+        "seed": 18092026,
+        "n_paths": 16384,
+        "days": 252,
+        "trading_days": 252,
+        "substeps_per_day": 4,
+        "coupling_substeps_per_day": 8,
+        "integration_dt_years": 0.000992063492063492,
+        "latent_negative_step_count": 3019,
+        "latent_negative_step_fraction": 0.0001828027149987599,
+        "paths_with_latent_negative_state": 1570,
+        "daily_zero_variance_count_excluding_initial": 765,
+        "minimum_latent_variance": -0.0011492570198692624,
+        "invalid_path_count": 0,
+        "excluded_path_count": 0
+      },
+      "stock_first_moment": {
+        "estimate": 110.71808396134223,
+        "continuous_model_value": 110.51709180756477,
+        "monte_carlo_se": 0.18402851510095586,
+        "standardized_difference": 1.0921794031060954,
+        "within_four_mc_standard_errors": true
+      },
+      "variance_first_moment": {
+        "estimate": 0.04815996372997064,
+        "continuous_model_value": 0.0483,
+        "monte_carlo_se": 0.0003043990706780563,
+        "standardized_difference": -0.4600417133910064,
+        "within_four_mc_standard_errors": true
+      },
+      "variance_second_raw_moment": {
+        "estimate": 0.0038374111323366783,
+        "continuous_model_value": 0.0038707485640659444,
+        "monte_carlo_se": 5.3690925169985655e-05,
+        "standardized_difference": -0.6209137135134041,
+        "within_four_mc_standard_errors": true
+      }
+    },
+    "8": {
+      "diagnostics": {
+        "scheme": "full-truncation latent variance Euler; log-stock Euler",
+        "rng": "NumPy default_rng / PCG64",
+        "seed": 18092026,
+        "n_paths": 16384,
+        "days": 252,
+        "trading_days": 252,
+        "substeps_per_day": 8,
+        "coupling_substeps_per_day": 8,
+        "integration_dt_years": 0.000496031746031746,
+        "latent_negative_step_count": 2204,
+        "latent_negative_step_fraction": 6.672692677331349e-05,
+        "paths_with_latent_negative_state": 1145,
+        "daily_zero_variance_count_excluding_initial": 254,
+        "minimum_latent_variance": -0.0005954025305353526,
+        "invalid_path_count": 0,
+        "excluded_path_count": 0
+      },
+      "stock_first_moment": {
+        "estimate": 110.71920322747775,
+        "continuous_model_value": 110.51709180756477,
+        "monte_carlo_se": 0.1840336504301322,
+        "standardized_difference": 1.0982307824715576,
+        "within_four_mc_standard_errors": true
+      },
+      "variance_first_moment": {
+        "estimate": 0.04816101730606184,
+        "continuous_model_value": 0.0483,
+        "monte_carlo_se": 0.0003041755686889384,
+        "standardized_difference": -0.45691603220207583,
+        "within_four_mc_standard_errors": true
+      },
+      "variance_second_raw_moment": {
+        "estimate": 0.003835284236783526,
+        "continuous_model_value": 0.0038707485640659444,
+        "monte_carlo_se": 5.359568707253353e-05,
+        "standardized_difference": -0.6617011408851406,
+        "within_four_mc_standard_errors": true
+      }
+    }
+  },
+  "paired_grid_comparisons": {
+    "2": {
+      "stock_endpoint_rmse_vs_eight_substeps": 0.9310455341702416,
+      "variance_endpoint_rmse_vs_eight_substeps": 0.0015248417726656963,
+      "stock_mean_difference_vs_eight_substeps": {
+        "estimate": 0.012555284107972176,
+        "continuous_model_value": 0.0,
+        "monte_carlo_se": 0.007273353807650417,
+        "standardized_difference": 1.7262028549698771,
+        "within_four_mc_standard_errors": true
+      },
+      "variance_mean_difference_vs_eight_substeps": {
+        "estimate": 6.404582626134361e-07,
+        "continuous_model_value": 0.0,
+        "monte_carlo_se": 1.1913188865377913e-05,
+        "standardized_difference": 0.0537604389429882,
+        "within_four_mc_standard_errors": true
+      }
+    },
+    "4": {
+      "stock_endpoint_rmse_vs_eight_substeps": 0.5351550946921196,
+      "variance_endpoint_rmse_vs_eight_substeps": 0.0008713416256532969,
+      "stock_mean_difference_vs_eight_substeps": {
+        "estimate": -0.0011192661355216228,
+        "continuous_model_value": 0.0,
+        "monte_carlo_se": 0.004181017629522233,
+        "standardized_difference": -0.2677018455072914,
+        "within_four_mc_standard_errors": true
+      },
+      "variance_mean_difference_vs_eight_substeps": {
+        "estimate": -1.0535760911995632e-06,
+        "continuous_model_value": 0.0,
+        "monte_carlo_se": 6.807559227541543e-06,
+        "standardized_difference": -0.15476561510285206,
+        "within_four_mc_standard_errors": true
+      }
+    }
+  },
+  "all_checks_passed": true,
+  "interpretation": "Moment checks use four Monte Carlo standard errors as diagnostic thresholds, not formal hypothesis tests. They do not prove absence of discretization bias. Paired endpoint errors compare to the finest available grid, not to exact sample paths. Full hedge-outcome convergence remains a separate required check. Negative latent variance states are handled by the documented full-truncation scheme and retained."
+}

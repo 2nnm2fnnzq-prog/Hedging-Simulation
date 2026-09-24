@@ -1,0 +1,116 @@
+{
+  "status": "PASS",
+  "check_count": 22,
+  "checks": [
+    {
+      "name": "cash-only financing and payoff",
+      "status": "PASS",
+      "max_absolute_residual": 0.0
+    },
+    {
+      "name": "cash-only hedge has no stock fees",
+      "status": "PASS",
+      "max_absolute_residual": 0.0
+    },
+    {
+      "name": "self-financing stock and discounted strike replicate payoff",
+      "status": "PASS",
+      "max_absolute_residual": 0.0
+    },
+    {
+      "name": "zero-fee replication has zero fee sum",
+      "status": "PASS",
+      "max_absolute_residual": 0.0
+    },
+    {
+      "name": "expiry liquidates existing holdings only",
+      "status": "PASS",
+      "max_absolute_residual": 0.0
+    },
+    {
+      "name": "flat-stock opening and liquidation charges",
+      "status": "PASS",
+      "max_absolute_residual": 0.0
+    },
+    {
+      "name": "fees reduce terminal cash exactly once",
+      "status": "PASS",
+      "max_absolute_residual": 1.7763568394002505e-15
+    },
+    {
+      "name": "opening cost comes from common endowment",
+      "status": "PASS",
+      "max_absolute_residual": 0.0
+    },
+    {
+      "name": "terminal holdings are zero",
+      "status": "PASS",
+      "max_absolute_residual": 0.0
+    },
+    {
+      "name": "two-day schedule matches independent cash expression",
+      "status": "PASS",
+      "max_absolute_residual": 7.105427357601002e-15
+    },
+    {
+      "name": "only scheduled trades and terminal liquidation execute",
+      "status": "PASS",
+      "max_absolute_residual": 0.0
+    },
+    {
+      "name": "fee total contains each executed charge once",
+      "status": "PASS",
+      "max_absolute_residual": 1.3877787807814457e-17
+    },
+    {
+      "name": "ledger cumulative fees match returned fee total",
+      "status": "PASS",
+      "max_absolute_residual": 0.0
+    },
+    {
+      "name": "terminal payoff is deducted once",
+      "status": "PASS",
+      "max_absolute_residual": 0.0
+    },
+    {
+      "name": "daily self-financing portfolio identity",
+      "status": "PASS",
+      "max_absolute_residual": 0.0
+    },
+    {
+      "name": "MSE decomposes into population variance plus squared bias",
+      "status": "PASS",
+      "max_absolute_residual": 0.0
+    },
+    {
+      "name": "cash account compounds each fee to expiry",
+      "status": "PASS",
+      "max_absolute_residual": 1.817990202823694e-15
+    },
+    {
+      "name": "path 0 vectorized errors equal individual accounting",
+      "status": "PASS",
+      "max_absolute_residual": 0.0
+    },
+    {
+      "name": "path 0 vectorized fees equal individual accounting",
+      "status": "PASS",
+      "max_absolute_residual": 0.0
+    },
+    {
+      "name": "path 1 vectorized errors equal individual accounting",
+      "status": "PASS",
+      "max_absolute_residual": 0.0
+    },
+    {
+      "name": "path 1 vectorized fees equal individual accounting",
+      "status": "PASS",
+      "max_absolute_residual": 0.0
+    },
+    {
+      "name": "nondegenerate loss decomposition",
+      "status": "PASS",
+      "max_absolute_residual": 0.0
+    }
+  ]
+}
