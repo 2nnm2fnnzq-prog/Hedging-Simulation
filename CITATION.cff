@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using this metadata."
+type: software
+title: "RISE Hedging Simulation"
+authors:
+  - family-names: Yang
+    given-names: Lucas
+version: "1.0.0"
+date-released: "2026-09-24"
+repository-code: "https://github.com/2nnm2fnnzq-prog/RISE-Hedging-Simulation"
+url: "https://github.com/2nnm2fnnzq-prog/RISE-Hedging-Simulation"
+license: MIT
+abstract: >-
+  Simulation code and compact results comparing contract-specific
+  implied-volatility Black-Scholes delta, plain Heston delta, and
+  correlation-adjusted Heston hedging. The frozen version-2 protocol
+  evaluates mean squared terminal hedging error after transaction costs
+  under structural-parameter perturbations and discrete rebalancing.
+keywords:
+  - option hedging
+  - Heston model
+  - Black-Scholes model
+  - stochastic volatility
+  - parameter uncertainty
+  - transaction costs
+  - Monte Carlo simulation

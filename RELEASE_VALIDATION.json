@@ -1,0 +1,584 @@
+{
+  "software_version": "1.0.0",
+  "checked_date": "2026-09-24",
+  "scope": "Fresh virtual-environment installation, numerical validators, and 128-path pilot. The full study was not rerun for this release; its original records remain in simulation/results.",
+  "python": "3.12.14",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "pip_check": "No broken requirements found.",
+  "pilot_comparison": {
+    "archived_file": "simulation/results/pilot_mse_summary.csv",
+    "fresh_file": "outputs/pilot/mse_summary.csv",
+    "rows": 18,
+    "max_absolute_numeric_difference": 0.0,
+    "rtol": 1e-12,
+    "atol": 1e-12,
+    "passed": true
+  },
+  "reports": {
+    "environment": {
+      "kind": "software_smoke_check",
+      "created_utc": "2026-09-24T12:44:34.014260+00:00",
+      "status": "passed",
+      "scope": "Deterministic library checks only; no simulated paths or hedge rankings.",
+      "research_engine_validated": false,
+      "python": "3.12.14",
+      "platform": "macOS-26.5.2-arm64-arm-64bit",
+      "packages": {
+        "numpy": "2.5.3",
+        "scipy": "1.18.1",
+        "pandas": "3.0.6",
+        "matplotlib": "3.11.2",
+        "jupyterlab": "4.6.4",
+        "QuantLib": "1.43"
+      },
+      "checks": {
+        "numpy_array_arithmetic": true,
+        "pandas_table": true,
+        "black_scholes_known_value": true,
+        "scipy_iv_round_trip": true,
+        "quantlib_bs_crosscheck": true,
+        "quantlib_heston_constant_variance_limit": true,
+        "matplotlib_figure_creation": true
+      },
+      "diagnostic_values": {
+        "independent_bs_call": 10.450583572185565,
+        "quantlib_bs_call": 10.450583572185575,
+        "quantlib_heston_near_constant_variance_call": 10.450583534833582,
+        "recovered_implied_volatility": 0.2000000000000004
+      }
+    },
+    "accounting": {
+      "status": "PASS",
+      "check_count": 22,
+      "checks": [
+        {
+          "name": "cash-only financing and payoff",
+          "status": "PASS",
+          "max_absolute_residual": 0.0
+        },
+        {
+          "name": "cash-only hedge has no stock fees",
+          "status": "PASS",
+          "max_absolute_residual": 0.0
+        },
+        {
+          "name": "self-financing stock and discounted strike replicate payoff",
+          "status": "PASS",
+          "max_absolute_residual": 0.0
+        },
+        {
+          "name": "zero-fee replication has zero fee sum",
+          "status": "PASS",
+          "max_absolute_residual": 0.0
+        },
+        {
+          "name": "expiry liquidates existing holdings only",
+          "status": "PASS",
+          "max_absolute_residual": 0.0
+        },
+        {
+          "name": "flat-stock opening and liquidation charges",
+          "status": "PASS",
+          "max_absolute_residual": 0.0
+        },
+        {
+          "name": "fees reduce terminal cash exactly once",
+          "status": "PASS",
+          "max_absolute_residual": 1.7763568394002505e-15
+        },
+        {
+          "name": "opening cost comes from common endowment",
+          "status": "PASS",
+          "max_absolute_residual": 0.0
+        },
+        {
+          "name": "terminal holdings are zero",
+          "status": "PASS",
+          "max_absolute_residual": 0.0
+        },
+        {
+          "name": "two-day schedule matches independent cash expression",
+          "status": "PASS",
+          "max_absolute_residual": 7.105427357601002e-15
+        },
+        {
+          "name": "only scheduled trades and terminal liquidation execute",
+          "status": "PASS",
+          "max_absolute_residual": 0.0
+        },
+        {
+          "name": "fee total contains each executed charge once",
+          "status": "PASS",
+          "max_absolute_residual": 1.3877787807814457e-17
+        },
+        {
+          "name": "ledger cumulative fees match returned fee total",
+          "status": "PASS",
+          "max_absolute_residual": 0.0
+        },
+        {
+          "name": "terminal payoff is deducted once",
+          "status": "PASS",
+          "max_absolute_residual": 0.0
+        },
+        {
+          "name": "daily self-financing portfolio identity",
+          "status": "PASS",
+          "max_absolute_residual": 0.0
+        },
+        {
+          "name": "MSE decomposes into population variance plus squared bias",
+          "status": "PASS",
+          "max_absolute_residual": 0.0
+        },
+        {
+          "name": "cash account compounds each fee to expiry",
+          "status": "PASS",
+          "max_absolute_residual": 1.817990202823694e-15
+        },
+        {
+          "name": "path 0 vectorized errors equal individual accounting",
+          "status": "PASS",
+          "max_absolute_residual": 0.0
+        },
+        {
+          "name": "path 0 vectorized fees equal individual accounting",
+          "status": "PASS",
+          "max_absolute_residual": 0.0
+        },
+        {
+          "name": "path 1 vectorized errors equal individual accounting",
+          "status": "PASS",
+          "max_absolute_residual": 0.0
+        },
+        {
+          "name": "path 1 vectorized fees equal individual accounting",
+          "status": "PASS",
+          "max_absolute_residual": 0.0
+        },
+        {
+          "name": "nondegenerate loss decomposition",
+          "status": "PASS",
+          "max_absolute_residual": 0.0
+        }
+      ]
+    },
+    "paths": {
+      "path_count": 16384,
+      "days": 252,
+      "seed": 18092026,
+      "market_parameters": {
+        "mu": 0.1,
+        "kappa": 4.75,
+        "theta": 0.0483,
+        "xi": 0.55,
+        "rho": -0.569
+      },
+      "checks": {
+        "constant_variance_coupling": true,
+        "exact_seed_reproducibility": true,
+        "stock_endpoint_error_decreases_toward_finest_grid": true,
+        "variance_endpoint_error_decreases_toward_finest_grid": true,
+        "finest_grid_stock_first_moment_within_four_mc_standard_errors": true,
+        "finest_grid_variance_first_moment_within_four_mc_standard_errors": true,
+        "finest_grid_variance_second_raw_moment_within_four_mc_standard_errors": true,
+        "no_invalid_or_excluded_paths": true
+      },
+      "grids": {
+        "2": {
+          "diagnostics": {
+            "scheme": "full-truncation latent variance Euler; log-stock Euler",
+            "rng": "NumPy default_rng / PCG64",
+            "seed": 18092026,
+            "n_paths": 16384,
+            "days": 252,
+            "trading_days": 252,
+            "substeps_per_day": 2,
+            "coupling_substeps_per_day": 8,
+            "integration_dt_years": 0.001984126984126984,
+            "latent_negative_step_count": 4278,
+            "latent_negative_step_fraction": 0.0005180722191220238,
+            "paths_with_latent_negative_state": 2208,
+            "daily_zero_variance_count_excluding_initial": 2147,
+            "minimum_latent_variance": -0.0021703062587827247,
+            "invalid_path_count": 0,
+            "excluded_path_count": 0
+          },
+          "stock_first_moment": {
+            "estimate": 110.73175851158572,
+            "continuous_model_value": 110.51709180756477,
+            "monte_carlo_se": 0.18404467306284725,
+            "standardized_difference": 1.1663836852678287,
+            "within_four_mc_standard_errors": true
+          },
+          "variance_first_moment": {
+            "estimate": 0.04816165776432446,
+            "continuous_model_value": 0.0483,
+            "monte_carlo_se": 0.00030476035085858297,
+            "standardized_difference": -0.4539377753234565,
+            "within_four_mc_standard_errors": true
+          },
+          "variance_second_raw_moment": {
+            "estimate": 0.003841179829662496,
+            "continuous_model_value": 0.0038707485640659444,
+            "monte_carlo_se": 5.3749263196258946e-05,
+            "standardized_difference": -0.5501235299818299,
+            "within_four_mc_standard_errors": true
+          }
+        },
+        "4": {
+          "diagnostics": {
+            "scheme": "full-truncation latent variance Euler; log-stock Euler",
+            "rng": "NumPy default_rng / PCG64",
+            "seed": 18092026,
+            "n_paths": 16384,
+            "days": 252,
+            "trading_days": 252,
+            "substeps_per_day": 4,
+            "coupling_substeps_per_day": 8,
+            "integration_dt_years": 0.000992063492063492,
+            "latent_negative_step_count": 3019,
+            "latent_negative_step_fraction": 0.0001828027149987599,
+            "paths_with_latent_negative_state": 1570,
+            "daily_zero_variance_count_excluding_initial": 765,
+            "minimum_latent_variance": -0.0011492570198692624,
+            "invalid_path_count": 0,
+            "excluded_path_count": 0
+          },
+          "stock_first_moment": {
+            "estimate": 110.71808396134223,
+            "continuous_model_value": 110.51709180756477,
+            "monte_carlo_se": 0.18402851510095586,
+            "standardized_difference": 1.0921794031060954,
+            "within_four_mc_standard_errors": true
+          },
+          "variance_first_moment": {
+            "estimate": 0.04815996372997064,
+            "continuous_model_value": 0.0483,
+            "monte_carlo_se": 0.0003043990706780563,
+            "standardized_difference": -0.4600417133910064,
+            "within_four_mc_standard_errors": true
+          },
+          "variance_second_raw_moment": {
+            "estimate": 0.0038374111323366783,
+            "continuous_model_value": 0.0038707485640659444,
+            "monte_carlo_se": 5.3690925169985655e-05,
+            "standardized_difference": -0.6209137135134041,
+            "within_four_mc_standard_errors": true
+          }
+        },
+        "8": {
+          "diagnostics": {
+            "scheme": "full-truncation latent variance Euler; log-stock Euler",
+            "rng": "NumPy default_rng / PCG64",
+            "seed": 18092026,
+            "n_paths": 16384,
+            "days": 252,
+            "trading_days": 252,
+            "substeps_per_day": 8,
+            "coupling_substeps_per_day": 8,
+            "integration_dt_years": 0.000496031746031746,
+            "latent_negative_step_count": 2204,
+            "latent_negative_step_fraction": 6.672692677331349e-05,
+            "paths_with_latent_negative_state": 1145,
+            "daily_zero_variance_count_excluding_initial": 254,
+            "minimum_latent_variance": -0.0005954025305353526,
+            "invalid_path_count": 0,
+            "excluded_path_count": 0
+          },
+          "stock_first_moment": {
+            "estimate": 110.71920322747775,
+            "continuous_model_value": 110.51709180756477,
+            "monte_carlo_se": 0.1840336504301322,
+            "standardized_difference": 1.0982307824715576,
+            "within_four_mc_standard_errors": true
+          },
+          "variance_first_moment": {
+            "estimate": 0.04816101730606184,
+            "continuous_model_value": 0.0483,
+            "monte_carlo_se": 0.0003041755686889384,
+            "standardized_difference": -0.45691603220207583,
+            "within_four_mc_standard_errors": true
+          },
+          "variance_second_raw_moment": {
+            "estimate": 0.003835284236783526,
+            "continuous_model_value": 0.0038707485640659444,
+            "monte_carlo_se": 5.359568707253353e-05,
+            "standardized_difference": -0.6617011408851406,
+            "within_four_mc_standard_errors": true
+          }
+        }
+      },
+      "paired_grid_comparisons": {
+        "2": {
+          "stock_endpoint_rmse_vs_eight_substeps": 0.9310455341702416,
+          "variance_endpoint_rmse_vs_eight_substeps": 0.0015248417726656963,
+          "stock_mean_difference_vs_eight_substeps": {
+            "estimate": 0.012555284107972176,
+            "continuous_model_value": 0.0,
+            "monte_carlo_se": 0.007273353807650417,
+            "standardized_difference": 1.7262028549698771,
+            "within_four_mc_standard_errors": true
+          },
+          "variance_mean_difference_vs_eight_substeps": {
+            "estimate": 6.404582626134361e-07,
+            "continuous_model_value": 0.0,
+            "monte_carlo_se": 1.1913188865377913e-05,
+            "standardized_difference": 0.0537604389429882,
+            "within_four_mc_standard_errors": true
+          }
+        },
+        "4": {
+          "stock_endpoint_rmse_vs_eight_substeps": 0.5351550946921196,
+          "variance_endpoint_rmse_vs_eight_substeps": 0.0008713416256532969,
+          "stock_mean_difference_vs_eight_substeps": {
+            "estimate": -0.0011192661355216228,
+            "continuous_model_value": 0.0,
+            "monte_carlo_se": 0.004181017629522233,
+            "standardized_difference": -0.2677018455072914,
+            "within_four_mc_standard_errors": true
+          },
+          "variance_mean_difference_vs_eight_substeps": {
+            "estimate": -1.0535760911995632e-06,
+            "continuous_model_value": 0.0,
+            "monte_carlo_se": 6.807559227541543e-06,
+            "standardized_difference": -0.15476561510285206,
+            "within_four_mc_standard_errors": true
+          }
+        }
+      },
+      "all_checks_passed": true,
+      "interpretation": "Moment checks use four Monte Carlo standard errors as diagnostic thresholds, not formal hypothesis tests. They do not prove absence of discretization bias. Paired endpoint errors compare to the finest available grid, not to exact sample paths. Full hedge-outcome convergence remains a separate required check. Negative latent variance states are handled by the documented full-truncation scheme and retained."
+    },
+    "pricing": {
+      "passed": true,
+      "grid_cases": 900,
+      "scenarios": 9,
+      "checks": {
+        "price_error": {
+          "maximum": 1.8406254298497515e-09,
+          "tolerance": 3e-07,
+          "passed": true
+        },
+        "delta_error": {
+          "maximum": 3.761637479282598e-08,
+          "tolerance": 1e-05,
+          "passed": true
+        },
+        "variance_derivative_error": {
+          "maximum": 0.00011786314765060979,
+          "tolerance": 0.002,
+          "passed": true
+        },
+        "quadrature_price_difference": {
+          "maximum": 1.8406254298497515e-09,
+          "tolerance": 3e-07,
+          "passed": true
+        },
+        "quadrature_delta_difference": {
+          "maximum": 3.7615971115734226e-08,
+          "tolerance": 1e-05,
+          "passed": true
+        },
+        "quadrature_variance_difference": {
+          "maximum": 3.53194873170537e-06,
+          "tolerance": 0.002,
+          "passed": true
+        },
+        "bs_iv_round_trip": {
+          "maximum": 7.771561172376096e-16,
+          "tolerance": 1e-10,
+          "passed": true
+        },
+        "constant_variance_limit": {
+          "maximum": 8.219297242817447e-09,
+          "tolerance": 1e-05,
+          "passed": true
+        }
+      },
+      "diagnostics": {
+        "heston_points": 1803,
+        "quadrature_disagreements": 548,
+        "quadrature_refinement_points": 288,
+        "quadrature_refinement_acceptances": 44,
+        "quantlib_fallback_points": 504,
+        "quantlib_zero_variance_regularizations": 180,
+        "roundoff_price_bound_adjustments": 187,
+        "iv_points": 5,
+        "iv_zero_time_value_limits": 0
+      },
+      "seconds": 5.985604124987731,
+      "notes": [
+        "Prices independently checked with QuantLib adaptive integration.",
+        "Greeks checked against Richardson differences using distinct bumps; variance derivative is not volatility vega.",
+        "Quadrature comparison uses checked 144-node and checked 180-node engines, each with its counted adaptive fallback.",
+        "Variance zero in QuantLib is regularized to 1e-12; production Fourier formula allows exactly zero.",
+        "The variance-Greek tolerance of 0.002 maps to at most about 1.5e-5 shares under the tested spot/parameter grid."
+      ]
+    },
+    "pricing_stress": {
+      "passed": true,
+      "seed": 24791,
+      "state_draws": 128,
+      "expiries": [
+        0.003968253968253968,
+        0.02,
+        0.1,
+        0.5,
+        1.0
+      ],
+      "price_comparisons": 640,
+      "state_distribution": {
+        "spot": "log-uniform on [25,300]",
+        "variance": "log-uniform on [1e-6,0.6]"
+      },
+      "parameters": {
+        "kappa": 2.75,
+        "theta": 0.0834,
+        "xi": 0.55,
+        "rho": -0.569
+      },
+      "strike": 100.0,
+      "rate": 0.04,
+      "all_outputs_finite": true,
+      "maximum_absolute_price_error": 4.3672552920177276e-09,
+      "price_tolerance": 3e-07,
+      "maximum_error_by_expiry": {
+        "0.003968253968253968": 2.3590018827235326e-11,
+        "0.02": 4.5238853630405907e-11,
+        "0.1": 4.3672552920177276e-09,
+        "0.5": 1.4132872649952333e-10,
+        "1.0": 5.755396159656812e-13
+      },
+      "diagnostics": {
+        "heston_points": 640,
+        "quadrature_disagreements": 263,
+        "quadrature_refinement_points": 263,
+        "quadrature_refinement_acceptances": 49,
+        "quantlib_fallback_points": 214,
+        "roundoff_price_bound_adjustments": 127
+      },
+      "seconds": 1.6783291249885224,
+      "notes": [
+        "Additional numerical state coverage; no new hedging outcomes or research scenarios.",
+        "Prices compared with independent QuantLib adaptive integration.",
+        "Delta and variance-derivative finiteness are checked here; their accuracy is assessed separately by validate_pricing.py.",
+        "Production adaptive fallbacks and roundoff adjustments remain enabled and counted; no states excluded."
+      ]
+    },
+    "pilot": {
+      "completed_utc": "2026-09-24T12:44:22.021454+00:00",
+      "elapsed_seconds": 1.775173582980642,
+      "contracts": 1,
+      "strategy_rows": 18,
+      "contrast_rows": 12,
+      "excluded_paths": 0,
+      "protocol_sha256": "0ec8d194476ee9e2e0017abed8ba630d12816447cc695e52d802388589ded65c"
+    }
+  },
+  "installed_packages": {
+    "anyio": "4.15.1",
+    "appnope": "1.0.0",
+    "argon2-cffi": "25.1.0",
+    "argon2-cffi-bindings": "26.1.0",
+    "arrow": "1.4.0",
+    "asttokens": "3.0.2",
+    "async-lru": "2.3.0",
+    "attrs": "26.1.0",
+    "babel": "2.18.0",
+    "beautifulsoup4": "4.15.0",
+    "bleach": "6.4.0",
+    "certifi": "2026.7.22",
+    "cffi": "2.1.1",
+    "charset-normalizer": "3.5.1",
+    "comm": "0.2.3",
+    "contourpy": "1.4.0",
+    "cycler": "0.12.1",
+    "debugpy": "1.8.22",
+    "defusedxml": "0.7.1",
+    "executing": "2.2.1",
+    "fastjsonschema": "2.22.2",
+    "fonttools": "4.66.0",
+    "fqdn": "1.5.1",
+    "h11": "0.16.0",
+    "httpcore": "1.0.9",
+    "httpx": "0.28.1",
+    "idna": "3.20",
+    "ipykernel": "7.3.0",
+    "ipython": "9.17.1",
+    "ipython_pygments_lexers": "1.1.1",
+    "isoduration": "20.11.0",
+    "jedi": "0.20.0",
+    "Jinja2": "3.1.6",
+    "json5": "0.15.0",
+    "jsonpointer": "3.1.1",
+    "jsonschema": "4.26.0",
+    "jsonschema-specifications": "2025.9.1",
+    "jupyter-events": "0.12.1",
+    "jupyter-lsp": "2.3.1",
+    "jupyter_builder": "1.2.3",
+    "jupyter_client": "8.10.0",
+    "jupyter_core": "5.9.1",
+    "jupyter_server": "2.21.1",
+    "jupyter_server_terminals": "0.5.4",
+    "jupyterlab": "4.6.4",
+    "jupyterlab_pygments": "0.3.0",
+    "jupyterlab_server": "2.28.1",
+    "kiwisolver": "1.5.1",
+    "lark": "1.3.1",
+    "MarkupSafe": "3.0.3",
+    "matplotlib": "3.11.2",
+    "matplotlib-inline": "0.2.2",
+    "mistune": "3.3.4",
+    "nbclient": "0.11.0",
+    "nbconvert": "7.17.1",
+    "nbformat": "5.11.1",
+    "nest-asyncio2": "1.7.3",
+    "notebook_shim": "0.2.4",
+    "numpy": "2.5.3",
+    "packaging": "26.3",
+    "pandas": "3.0.6",
+    "pandocfilters": "1.5.1",
+    "parso": "0.8.7",
+    "pexpect": "4.9.0",
+    "pillow": "12.3.0",
+    "pip": "25.0.1",
+    "platformdirs": "4.11.12",
+    "prometheus_client": "0.26.0",
+    "prompt_toolkit": "3.0.53",
+    "psutil": "7.2.2",
+    "ptyprocess": "0.7.0",
+    "pure_eval": "0.2.4",
+    "pycparser": "3.0",
+    "Pygments": "2.21.0",
+    "pyparsing": "3.3.3",
+    "python-dateutil": "2.9.0.post0",
+    "python-json-logger": "4.2.0",
+    "PyYAML": "6.0.3",
+    "pyzmq": "27.2.0",
+    "QuantLib": "1.43",
+    "referencing": "0.37.0",
+    "requests": "2.34.2",
+    "rfc3339-validator": "0.1.4",
+    "rfc3986-validator": "0.1.1",
+    "rfc3987-syntax": "1.1.0",
+    "rpds-py": "2026.6.3",
+    "scipy": "1.18.1",
+    "Send2Trash": "2.1.0",
+    "six": "1.17.0",
+    "soupsieve": "2.10",
+    "stack-data": "0.6.3",
+    "terminado": "0.18.1",
+    "tinycss2": "1.5.1",
+    "tornado": "6.5.10",
+    "traitlets": "5.16.1",
+    "typing_extensions": "4.16.0",
+    "tzdata": "2026.4",
+    "uri-template": "1.3.0",
+    "urllib3": "2.8.0",
+    "wcwidth": "0.9.1",
+    "webcolors": "25.10.0",
+    "webencodings": "0.6.1",
+    "websocket-client": "1.9.2"
+  }
+}

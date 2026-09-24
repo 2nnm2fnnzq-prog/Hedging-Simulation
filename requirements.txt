@@ -1,0 +1,11 @@
+# Python >=3.12; original study used Python 3.12.14.
+# Direct dependencies for computation, plots, and notebook review.
+# Historical full environment: simulation/requirements-lock.txt.
+numpy==2.5.3
+scipy==1.18.1
+pandas==3.0.6
+QuantLib==1.43
+matplotlib==3.11.2
+nbformat==5.11.1
+ipython==9.17.1
+jupyterlab==4.6.4
